@@ -2,23 +2,53 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>SAPUI5 Walkthrough</title>
+	<title>SAPUI5 Binding</title>
 	<script
-		id="sap-ui-bootstrap"
-		src="resources/sap-ui-core.js"
+		id="sap-ui-bootstrap"				
+		src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_belize"
 		data-sap-ui-bindingSyntax="complex"
 		data-sap-ui-libs="sap.m"
 		data-sap-ui-compatVersion="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" 
 		data-sap-ui-resourceroots='{
 			"sap.demo2020": "./"
 		}'>
 
+
+
+
 	</script>
 </head>
-<body class="sapUiBody" id="content">
+<body class="sapUiBody">	
 	<div data-sap-ui-component data-name="sap.demo2020" data-id="container" data-settings='{"id" : "binding"}'></div>
 </body>
 </html>
+
+<!-- https://sapui5.hana.ondemand.com/resources/sap-ui-core.js
+
+
+/sap/public/bc/ui5_ui5/resources/sap-ui-core.js
+		
+
+		
+
+
+		sap.ui.getCore().attachInit(function () {
+			sap.ui.require([
+				"sap/m/Shell",
+				"sap/ui/core/ComponentContainer"
+			], function (Shell, ComponentContainer) {
+				
+				new Shell({
+					app : new ComponentContainer({
+						name : "sap.demo2020",
+						settings : {
+							id : "binding"
+						}
+					})
+				}).placeAt("container");
+			});
+		});
+	-->
