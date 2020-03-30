@@ -7,6 +7,7 @@ sap.ui.define([
 
         onPress:function(){
             var bindingModel = this.getView().getModel("bindinglocal");
+            //show local model
             console.log(this.getView().getModel("bindinglocal").getData().bindingModel.company);
         }
     });
