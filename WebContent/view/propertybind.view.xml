@@ -11,6 +11,9 @@
 				<ToolbarSpacer/>
 				<Button text="Show Model" press="onPress" />
 				<ToolbarSpacer/>
+			    <Button text="Get Something from CAL" press="onPressCAL" />
+				<ToolbarSpacer/>
+			    <Button text="Get Something from ES5" press="onPressES5" />				
 			</Toolbar>    
    </Panel>
 </mvc:View>

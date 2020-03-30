@@ -8,7 +8,16 @@
       "description": "{{appDescription}}",
       "applicationVersion": {
         "version": "1.0.0"
-      }
+      },
+      "dataSources": {
+        "RemoteData": {
+          "uri": "/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+          "type": "OData",
+          "settings": {
+            "odataVersion": "2.0"
+          }
+        }
+      }      
     },
     "sap.ui": {
       "technology": "UI5",
@@ -41,7 +50,14 @@
         "bindinglocal": {
           "type": "sap.ui.model.json.JSONModel",
           "uri": "model/sample.json"
-          }	      
+          },
+        "bindingcal": {
+            "dataSource": "RemoteData",
+            "preload": true,
+            "settings": {
+              "defaultBindingMode": "TwoWay"
+            }				
+          }          	      
       },
       "resources": {
   
