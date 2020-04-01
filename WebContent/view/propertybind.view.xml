@@ -2,7 +2,7 @@
    controllerName="sap.demo2020.controller.propertybind"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
-   <Panel>
+
    	<Input
 		value="{bindinglocal>/bindingModel/company/name}"
 	/>
@@ -15,5 +15,5 @@
 				<ToolbarSpacer/>
 			    <Button text="Get Something from ES5" press="onPressES5" />				
 			</Toolbar>    
-   </Panel>
+
 </mvc:View>

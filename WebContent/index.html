@@ -5,13 +5,12 @@
 	<title>SAPUI5 Binding</title>
 	<script
 		id="sap-ui-bootstrap"				
-		src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_belize"
 		data-sap-ui-bindingSyntax="complex"
 		data-sap-ui-libs="sap.m"
 		data-sap-ui-compatVersion="edge"
 		data-sap-ui-async="true"
-        data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" 
 		data-sap-ui-resourceroots='{
 			"sap.demo2020": "./"
 		}'>
@@ -20,14 +19,28 @@
 
 
 	</script>
+	
+      <script>
+         sap.ui.getCore().attachInit(function () {
+            new sap.m.Shell({
+               app : new sap.ui.core.ComponentContainer({
+                  name : "sap.demo2020",
+                  height : "100%"
+               })
+            }).placeAt("content");
+         });
+      </script>
+      	
 </head>
-<body class="sapUiBody">	
-	<div data-sap-ui-component data-name="sap.demo2020" data-id="container" data-settings='{"id" : "binding"}'></div>
-</body>
+	<body class="sapUiBody" id="content">
+	</body>
 </html>
 
 <!-- https://sapui5.hana.ondemand.com/resources/sap-ui-core.js
 
+<body class="sapUiBody">	
+	<div data-sap-ui-component data-name="sap.demo2020" data-id="container" data-settings='{"id" : "binding"}'></div>
+</body>
 
 /sap/public/bc/ui5_ui5/resources/sap-ui-core.js
 		
